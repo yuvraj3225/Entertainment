@@ -4,14 +4,17 @@ import logo from '../assets/logo.png'
 import { useNavigate } from 'react-router-dom'
 
 export default function Header(props) {
-    const navigate = useNavigate()
+    const navigate = useNavigate() // useNavigate hook from react-router-dom to navigate between pages
   return (
-    <Container className="flex a-center j-between">
+       //Container component with styled-components for styling
+      <Container className="flex a-center j-between">  
         <div className="logo">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" /> 
         </div>
+        {/* // Button component with onClick event handler to navigate to either login or signup page based on the login prop */}
         <button onClick={()=> navigate (props.login ? "/login" : "/signup")}>
-            {props.login ? "Log In": "Sign In"}
+            {props.login ? "Log In": "Sign In"} 
+            {/* // Conditional rendering of button text based on the login prop */}
         </button>
     </Container>
 
@@ -19,9 +22,11 @@ export default function Header(props) {
 }
 const Container = styled.div`
 padding: 0 2rem;
+
+overflow: hidden; 
 .logo {
   img {
-    height: 7rem;
+    height: 5rem;
     mix-blend-mode:   lighten ;
   }
 }

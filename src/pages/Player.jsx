@@ -3,20 +3,27 @@ import styled from "styled-components";
 import { BsArrowLeft } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import video from "../assets/video.mp4";
-export default function Player() {
-  const navigate = useNavigate();
 
+// Functional component for the player page
+export default function Player() {
+  const navigate = useNavigate(); // Getting navigation function from React Router
+
+  // Rendering component
   return (
     <Container>
       <div className="player">
         <div className="back">
+          {/* Back arrow icon to navigate back */}
           <BsArrowLeft onClick={() => navigate(-1)} />
         </div>
+        {/* Video player */}
         <video src={video} autoPlay loop controls />
       </div>
     </Container>
   );
 }
+
+// Styled component for the container
 
 const Container = styled.div`
   .player {

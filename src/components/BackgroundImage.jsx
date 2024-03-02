@@ -15,7 +15,8 @@ export default function Backgrountimage() {
  width : 100vw;
  img {
   height : 100vh;
-  width : 100vw
+  width : 100vw;
+  
 
  }`;
    
