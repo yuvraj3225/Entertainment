@@ -50,31 +50,5 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 
-  {
-  "version": 2, // Version of the Vercel configuration file
-
-  "builds": [
-    {
-      "src": "movie/ai/package.json", // Location of the package.json file for the frontend
-      "use": "@vercel/static-build", // Use the static build step for the frontend
-      "config": { "distDir": "movie/ai/build" } // Specify the build output directory for the frontend
-    },
-    {
-      "src": "movie/api/**/*", // Location of the backend files
-      "use": "@vercel/node" // Use Node.js runtime for the backend
-    }
-  ],
-
-  "routes": [
-    {
-      "src": "/api/(.*)", // Define routes for API requests
-      "dest": "movie/api/$1.js" // Map API routes to the corresponding backend files
-    },
-    {
-      "src": "/(.*)", // Define routes for frontend requests
-      "dest": "movie/ai/$1" // Serve frontend files for other routes
-    }
-  ]
-}
 
 }
