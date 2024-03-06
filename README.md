@@ -36,7 +36,7 @@ Some features of this application :
 - **Watch Trailers: Enjoy high-quality trailers of movies and TV shows to get a glimpse before watching.
 
 ## Technologies Used
-- Frontend:
+#- Frontend:
 
 - **HTML5
 - **CSS3
@@ -46,7 +46,7 @@ Some features of this application :
 - **Axios (for API requests)
 - **React Router (for routing)
 
-- Backend
+#- Backend
 - **Node.js
 - **Express.js
 - **MongoDB (for database)
